@@ -33,7 +33,6 @@ fi
 if [ -e "$DEPLOYMENT_SOURCE\.config\azure\iisnode.yml" ]; then
   echo "meteor-azure: WARNING! iisnode.yml will not be respected, please move configuration to web.config"
 fi
-echo "$DEPLOYMENT_SOURCE"
 if [ ! -e "$DEPLOYMENT_SOURCE\.config\azure\web.config" ]; then
   echo "meteor-azure: WARNING! No web.config was found (app may not start properly)"
 fi
@@ -45,6 +44,7 @@ if [[ -v METEOR_AZURE_NOCACHE ]]; then
 fi
 if [ ! -d "$DEPLOYMENT_SOURCE\\$METEOR_AZURE_ROOT.meteor" ]; then
   echo "meteor-azure: ERROR! Could not find Meteor project directory (consider specifying 'METEOR_AZURE_ROOT')"
+  echo "$DEPLOYMENT_SOURCE\\$METEOR_AZURE_ROOT.meteor"
   exit 1
 fi
 if [[ ! -v METEOR_AZURE_NODE_VERSION ]]; then
