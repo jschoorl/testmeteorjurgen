@@ -33,6 +33,7 @@ fi
 if [ -e "$DEPLOYMENT_SOURCE\.config\azure\iisnode.yml" ]; then
   echo "meteor-azure: WARNING! iisnode.yml will not be respected, please move configuration to web.config"
 fi
+echo "$DEPLOYMENT_SOURCE"
 if [ ! -e "$DEPLOYMENT_SOURCE\.config\azure\web.config" ]; then
   echo "meteor-azure: WARNING! No web.config was found (app may not start properly)"
 fi
