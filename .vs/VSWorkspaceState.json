@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\.config\\azure",
+    "\\src\\client",
+    "\\src\\server"
   ],
   "PreviewInSolutionExplorer": false
 }
